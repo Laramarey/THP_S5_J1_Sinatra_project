@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>The Gossip Project: premier site de gossip en France </title>
+  </head>
+  <body>
+
+    <h1>Mon super site de gossip, depuis le dossier views !</h1>
+
+      <p>
+        <a href="/gossips/new/">Clique-ici pour créer ton nouveau potin</a>
+      </p>
+
+     <% gossips.each_with_index do |gossip, index| %>
+    <p>
+      <%= gossip.author %><br/>
+      <%= gossip.content %><br/>
+      <a href='/gossips/<%= index %>/'> =>La page du gossip <= </a>
+    </p>
+  <% end %>
+
+
+  </body>
+
+</html>
