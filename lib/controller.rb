@@ -28,7 +28,7 @@ class ApplicationController < Sinatra::Base
 
 #affichage dynamique du gossip par ID
    get '/gossips/:id/' do 
-    erb :show, locals: {gossips: Gossip.all[params[:id].to_i], id: params[:id].to_i}
+    erb :show, locals: {gossips: Gossip.find(params["id"].to_i), id: params["id"]}
   end
 
 end #fin de la classe
